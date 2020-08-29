@@ -36,3 +36,11 @@ def password_generator(username):
   for i in range(len(username)): # range here means to loop as many times for example range(5) means loop five times however here it loops with length of the username.
     password += username[i-1]  # here we add the alphabet from back such as the first one would be [0-1] is [-1] which is the last alphatbit and it will placed in the zeroth place in the new string
   return password
+
+                                      ### my comments ###
+# .split will be splitting a string into words
+
+line_one = "The sky has given over"
+line_one_words=line_one.split()
+
+print(line_one_words)
