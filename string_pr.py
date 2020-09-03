@@ -46,15 +46,15 @@ line_one_words=line_one.split()
 print(line_one_words)
 
 # when removing all white spaces through a loop
-
+# deeply look to the love_maybe_lines it has comma so it means different items . thus we loop on each item to be stripped .
 love_maybe_lines = ['Always    ', '     in the middle of our bloodiest battles  ', 'you lay down your arms',
                     '           like flowering mines    ', '\n', '   to conquer me home.    ']
 
 love_maybe_lines_stripped = []
 
-for line in love_maybe_lines:
-  love_maybe_lines_stripped.append(line.strip())
+for i in love_maybe_lines:
+  love_maybe_lines_stripped.append(i.strip())
 
 love_maybe_full = '\n'.join(love_maybe_lines_stripped)
 
-print(love_maybe_full)
+print(love_maybe_lines_stripped)
