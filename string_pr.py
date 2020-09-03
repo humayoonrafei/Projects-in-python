@@ -44,3 +44,17 @@ line_one = "The sky has given over"
 line_one_words=line_one.split()
 
 print(line_one_words)
+
+# when removing all white spaces through a loop
+
+love_maybe_lines = ['Always    ', '     in the middle of our bloodiest battles  ', 'you lay down your arms',
+                    '           like flowering mines    ', '\n', '   to conquer me home.    ']
+
+love_maybe_lines_stripped = []
+
+for line in love_maybe_lines:
+  love_maybe_lines_stripped.append(line.strip())
+
+love_maybe_full = '\n'.join(love_maybe_lines_stripped)
+
+print(love_maybe_full)
