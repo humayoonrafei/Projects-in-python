@@ -219,3 +219,14 @@ for i in daily_transactions:
 print(daily_transactions_split)
 
 transactions_clean=[]
+
+transactions_clean = []
+
+# we need nested loop to One to iterate through the outer list, daily_transactions_split and one to iterate through each of the transactions and perform the .strip() on the data points.
+
+for i in daily_transactions_split:
+  for item in i:
+    transactions_clean.append(item.strip())
+
+print(transactions_clean)
+
