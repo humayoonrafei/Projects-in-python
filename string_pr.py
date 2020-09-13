@@ -225,8 +225,22 @@ transactions_clean = []
 # we need nested loop to One to iterate through the outer list, daily_transactions_split and one to iterate through each of the transactions and perform the .strip() on the data points.
 
 for i in daily_transactions_split:
+  transaction_clean = []
   for item in i:
-    transactions_clean.append(item.strip())
+    transaction_clean.append(item.replace("\n", "").strip(" "))
+  transactions_clean.append(transaction_clean)
 
-print(transactions_clean)
+# print(transactions_clean)
+
+customers = []
+sales = []
+thread_sold = []
+
+for i in transactions_clean:
+  customers.append(i[0])
+  sales.append(i[1])
+  thread_sold.append(i[2])
+print(customers)
+print(sales)
+print(thread_sold)
 
