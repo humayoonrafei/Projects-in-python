@@ -244,3 +244,34 @@ print(customers)
 print(sales)
 print(thread_sold)
 
+total_sales = 0
+
+for i in sales:
+  total_sales += float(i.strip('$'))
+# print(total_sales)
+
+# print(thread_sold)
+
+thread_sold_split = []
+
+for i in thread_sold:
+  for color in i.split('&'):
+    thread_sold_split.append(color)
+
+print(thread_sold_split)
+
+
+def color_count(color):
+  counter = 0
+  for i in thread_sold_split:
+    if (i == color):
+      counter += 1
+  return counter
+
+
+print(color_count('white'))
+
+colors = ['red', 'yellow', 'green', 'white', 'black', 'blue', 'purple']
+
+for color in colors:
+  print("There were {} of this {} color sold today".format(color_count(color), color))
